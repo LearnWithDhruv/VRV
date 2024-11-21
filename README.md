@@ -63,7 +63,7 @@ Before starting, ensure you have the following installed:
    ```json
    {
      "users": [
-       { "id": 1, "name": "John Doe", "email": "john@example.com", "role": "Admin", "status": "Active" }
+       { "id": 1, "name": "dhruv khatter", "email": "dhruv@gmail.com", "role": "Admin", "status": "Active" }
      ],
      "roles": [
        { "id": 1, "name": "Admin", "permissions": ["Read", "Write", "Delete"] }
