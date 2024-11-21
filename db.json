@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "c94f",
+      "name": "dev",
+      "email": "dev2001@gmail.com",
+      "role": "write",
+      "status": "Inactive"
+    }
+  ],
+  "roles": [
+    {
+      "id": "1",
+      "name": "Admin",
+      "permissions": [
+        "Read",
+        "Write",
+        "Delete"
+      ]
+    },
+    {
+      "id": "9284",
+      "name": "Admin",
+      "permissions": [
+        "Read"
+      ]
+    },
+    {
+      "id": "b61a",
+      "name": "Manager",
+      "permissions": [
+        "Read"
+      ]
+    }
+  ]
+}

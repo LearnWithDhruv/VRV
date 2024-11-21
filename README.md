@@ -1,184 +1,70 @@
+# Getting Started with Create React App
 
-# Admin Dashboard
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Overview
-This project is a React-based Admin Dashboard for managing users, roles, and permissions. The application allows administrators to:
-- View, add, edit, and delete users.
-- Manage roles and assign permissions.
-- Dynamically modify permissions for roles.
-- Simulate API interactions using JSON Server.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## Features
-### User Management
-- View users in a table with details like name, email, role, and status.
-- Add new users through a form.
-- Edit existing users.
-- Delete users.
+### `npm start`
 
-### Role Management
-- View roles and their associated permissions.
-- Add new roles with custom permissions.
-- Edit roles and permissions.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Dynamic Permissions
-- Assign permissions dynamically to roles.
-- Modify permissions for existing roles.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### API Simulation
-- Mocked API using JSON Server for CRUD operations on users and roles.
+### `npm test`
 
----
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Prerequisites
-Before starting, ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v14+)
-- npm (comes with Node.js)
-- A modern web browser
+### `npm run build`
 
----
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Installation
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-1. **Clone the Repository**:
-   ```bash
-   git clone <repository-url>
-   cd admin-dashboard
-   ```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
+### `npm run eject`
 
-3. **Set Up JSON Server**:
-   Install JSON Server globally or as a dev dependency:
-   ```bash
-   npm install -g json-server
-   ```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-4. **Create the Mock API Data File**:
-   Create a `db.json` file in the root directory with the following content:
-   ```json
-   {
-     "users": [
-       { "id": 1, "name": "dhruv khatter", "email": "dhruv@gmail.com", "role": "Admin", "status": "Active" }
-     ],
-     "roles": [
-       { "id": 1, "name": "Admin", "permissions": ["Read", "Write", "Delete"] }
-     ]
-   }
-   ```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
----
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Running the Application
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-1. **Start the Mock API Server**:
-   ```bash
-   json-server --watch db.json --port 3001
-   ```
+## Learn More
 
-2. **Start the React App**:
-   ```bash
-   npm start
-   ```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-3. **Access the Application**:
-   Open your browser and navigate to `http://localhost:3000`.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
----
+### Code Splitting
 
-## Project Structure
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-```plaintext
-admin-dashboard/
-├── public/
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   ├── Users/
-│   │   │   ├── UserList.js
-│   │   │   ├── UserForm.js
-│   │   │   ├── UserEditForm.js
-│   │   └── Roles/
-│   │       ├── RoleList.js
-│   │       ├── RoleForm.js
-│   ├── pages/
-│   │   ├── Dashboard.js
-│   │   ├── UsersPage.js
-│   │   └── RolesPage.js
-│   ├── services/
-│   │   ├── api.js
-│   ├── App.js
-│   ├── index.js
-├── db.json
-└── package.json
-```
+### Analyzing the Bundle Size
 
----
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-## Key Files
+### Making a Progressive Web App
 
-### `src/components/Users/UserList.js`
-Displays a table of users with options to edit or delete.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### `src/components/Users/UserForm.js`
-Form to add new users.
+### Advanced Configuration
 
-### `src/components/Users/UserEditForm.js`
-Form to edit existing users.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### `src/components/Roles/RoleList.js`
-Displays a list of roles with their permissions.
+### Deployment
 
-### `src/components/Roles/RoleForm.js`
-Form to add or edit roles.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `db.json`
-Contains mock data for users and roles.
+### `npm run build` fails to minify
 
----
-
-## How to Add New Features
-
-1. **Update `db.json` for Mock Data**:
-   Add new collections or update existing data.
-
-2. **Add New Components**:
-   Create reusable components in the `src/components` directory.
-
-3. **Integrate API Calls**:
-   Update `api.js` to include new API endpoints.
-
----
-
-## Common Issues
-
-### JSON Server Not Starting
-- Ensure the `db.json` file is valid JSON (no trailing commas).
-
-### React App Not Running
-- Check for missing dependencies and run:
-  ```bash
-  npm install
-  ```
-
-### API Errors
-- Ensure JSON Server is running on `http://localhost:3001`.
-
----
-
-## Deployment
-1. Build the app for production:
-   ```bash
-   npm run build
-   ```
-
-2. Deploy the `build` folder to a hosting platform (e.g., Netlify, Vercel).
-
----
-
-## License
-This project is licensed under the MIT License.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
