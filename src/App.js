@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
+import UsersPage from "./pages/UsersPage";
+import UserForm from "./components/Users/UserForm";
+import RolesPage from "./pages/RolesPage";
+import RoleForm from "./components/Roles/RoleForm";
+import UserEditForm from "./components/Users/UserEditForm";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Dashboard />} />
+      <Route path="/users" element={<UsersPage />} />
+      <Route path="/users/add" element={<UserForm />} />
+      <Route path="/roles" element={<RolesPage />} />
+      <Route path="/users/edit/:id" element={<UserEditForm />} />
+      <Route path="/roles/add" element={<RoleForm />} />
+    </Routes>
   );
-}
+};
 
 export default App;
